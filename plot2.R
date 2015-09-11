@@ -16,9 +16,8 @@ dataset_feb <- dataset[indexes,3:10]
 rm(dataset, indexes)
 
 # Creation of the plot.
-# To produce the lines plot (without the default 'dots' used by R) the parameter type = "n" 
+# To produce the lines plot (without the default 'dots' used by R) the parameter type = "l" 
 # in the plot() function call has been specified.
 png(filename = "plot2.png", width = 480, height = 480)
-plot(dataset_feb$newDate, dataset_feb$Global_active_power, xlab = "", ylab = "Global Active Power (kilowatts)", type ="n")
-lines(dataset_feb$newDate, dataset_feb$Global_active_power, type="l")
+plot(dataset_feb$newDate, dataset_feb$Global_active_power, xlab = "", ylab = "Global Active Power (kilowatts)", type ="l")
 dev.off()
